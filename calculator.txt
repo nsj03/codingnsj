@@ -1,0 +1,90 @@
+#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int a[1003];
+int b[1003];
+int c[1003];
+int d[1003];
+
+int main()
+{
+
+    int n;
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        scanf("%d %d %d %d",&a[i],&b[i],&c[i],&d[i]);
+    }
+    for(int i=0;i<n;i++){
+        if(i!=0) printf("\n");
+        if(a[i]+b[i]-c[i] == d[i]){
+            printf("%d+%d-%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }if(a[i]+b[i]*c[i] == d[i]){
+            printf("%d+%d*%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }
+        if(a[i]+b[i]/c[i] == d[i]){
+            printf("%d+%d/%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }
+        if(a[i]-b[i]+c[i] == d[i]){
+            printf("%d-%d+%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }
+        if(a[i]-b[i]*c[i] == d[i]){
+            printf("%d-%d*%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }
+        if(a[i]-b[i]/c[i] == d[i]){
+            printf("%d-%d/%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }
+        if(a[i]*b[i]+c[i] == d[i]){
+            printf("%d*%d+%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }
+        if(a[i]*b[i]-c[i] == d[i]){
+            printf("%d*%d-%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }
+        if(a[i]*b[i]/c[i] == d[i]){
+            printf("%d*%d/%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }
+        if(a[i]/b[i]+c[i] == d[i]){
+            printf("%d/%d+%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }
+        if(a[i]/b[i]-c[i] == d[i]){
+            printf("%d/%d-%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }
+        if(a[i]/b[i]*c[i] == d[i]){
+            printf("%d/%d*%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }
+
+        if(a[i]*((double)b[i]+(double)c[i]/10) == d[i]){
+            printf("%d*%d.%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }
+        if(((double)a[i]/((double)b[i])+(double)c[i]/10) == (double)d[i]){
+            printf("%d/%d.%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }
+        if(((double)a[i]+(double)b[i]/10)*c[i] == d[i]){
+            printf("%d.%d*%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }
+        if(((double)a[i]+(double)b[i]/10)/(double)c[i] == d[i]){
+            printf("%d.%d/%d=%d",a[i],b[i],c[i],d[i]);
+            continue;
+        }
+
+    }
+
+
+    return 0;
+}
